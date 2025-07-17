@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "dome.uz" }],
+      "destination": "https://www.dome.uz",
+      "permanent": true
+    }
+  ]
+}
