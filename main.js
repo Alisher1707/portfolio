@@ -1,17 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Splash screen
+  // Splash screen - avtomatik yashirish
   const splashScreen = document.querySelector('.splash-screen');
-  const skipButton = document.querySelector('.splash-skip-btn');
-
-  // 3 soniyadan keyin avtomatik yashirish
+  
   setTimeout(() => {
     splashScreen.classList.add('hidden');
   }, 3000);
-
-  // "Skip" tugmasi orqali yashirish
-  skipButton.addEventListener('click', () => {
-    splashScreen.classList.add('hidden');
-  });
 
   // AOS kutubxonasini ishga tushurish
   AOS.init();

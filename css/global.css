@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #7f42a7;
+    --secondary-color: #6600c5;
+    --accent-color: #5300a0;
+    --text-primary: #e7e7e7;
+    --text-secondary: #b7b7b7;
+    --text-muted: #a7a7a7;
+    --bg-primary: black;
+    --gradient-primary: linear-gradient(45deg, var(--text-primary), var(--primary-color));
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,22 +28,12 @@ body {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
-    background-color: black;
-    color: #e7e7e7;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     min-height: 100vh;
     line-height: 1.5;
 }
 
-.layer-blur {
-    height: 0;
-    width: 30rem;
-    position: absolute;
-    top: 20%;
-    right: 0;
-    box-shadow: 0 0 700px 15px white;
-    rotate: -30deg;
-    z-index: -1;
-}
 
 .container {
     width: 100%;
