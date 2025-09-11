@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullStack Developer CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #213448;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .title {
+            font-size: 1.3em;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.9;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 40px 30px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.4em;
+            color: #213448;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #213448;
+            font-weight: 600;
+        }
+        
+        .sidebar .section-title {
+            color: #333;
+            border-bottom-color: #333;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: #213448;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #213448;
+        }
+        
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            color: #213448;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .duration {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .project-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .project-tech {
+            color: #213448;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .languages div, .contact-details div {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .strength-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+            color: #555;
+        }
+        
+        .strength-item::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #213448;
+            font-size: 0.8em;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+        }
+        
+        .summary {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #213448;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1 class="name">Abdusalomov Alisher</h1>
+            <h2 class="title">FullStack Developer</h2>
+            <div class="contact-info">
+                <a href="mailto:abdusalomova941@gmail.com" class="contact-item">
+                    <span>📧</span>
+                    <span>abdusalomova941@gmail.com</span>
+                </a>
+                <a href="tel:+998992360631" class="contact-item">
+                    <span>📱</span>
+                    <span>+998 99 236 06 31</span>
+                </a>
+                <a href="https://github.com/Alisher1707" target="_blank" class="contact-item">
+                    <span>🌐</span>
+                    <span>github.com/Alisher1707</span>
+                </a>
+                <a href="https://maps.google.com/?q=Tashkent,Uzbekistan" target="_blank" class="contact-item">
+                    <span>📍</span>
+                    <span>Tashkent, Uzbekistan</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <section class="section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Next.js (React)</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">TailwindCSS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Node.js (Express)</span>
+                            <span class="skill-tag">REST API</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Database</h4>
+                        <div class="skills">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Mongoose</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Other</h4>
+                        <div class="skills">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Languages</h3>
+                    <div class="languages">
+                        <div><strong>English:</strong> Advanced</div>
+                        <div><strong>Uzbek:</strong> Native</div>
+                        <div><strong>Russian:</strong> Intermediate</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Key Strengths</h3>
+                    <div class="strength-item">Problem-solving mindset</div>
+                    <div class="strength-item">Quick learner</div>
+                    <div class="strength-item">Team collaboration</div>
+                    <div class="strength-item">Clean code practices</div>
+                    <div class="strength-item">Responsive design</div>
+                </section>
+            </aside>
+
+            <main class="content">
+                <section class="section">
+                    <div class="summary">
+                        Passionate FullStack Developer with 1.5 years of hands-on experience building modern web applications. Proficient in React, Vue.js, Angular for frontend development and Node.js for backend solutions. Committed to writing clean, efficient code and continuously learning new technologies.
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Professional Experience</h3>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Junior FullStack Developer</div>
+                        <div class="company">[Company Name]</div>
+                        <div class="duration">[Start Date] - Present</div>
+                        <div class="description">
+                            • Developed responsive web applications using React and Node.js, serving 1000+ active users<br>
+                            • Collaborated with cross-functional teams to deliver 5+ projects on time<br>
+                            • Implemented RESTful APIs and integrated third-party services<br>
+                            • Optimized application performance, reducing load time by 30%<br>
+                            • Participated in code reviews and followed best practices
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Key Projects</h3>
+                    
+                    <div class="project-item">
+                        <div class="project-name">E-Commerce Platform</div>
+                        <div class="project-tech">React, Node.js, MongoDB, Express.js</div>
+                        <div class="description">
+                            Built a full-featured e-commerce website with user authentication, product management, shopping cart functionality, and payment integration. Implemented responsive design for mobile compatibility.
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-name">Task Management App</div>
+                        <div class="project-tech">Vue.js, TypeScript, Node.js, MySQL</div>
+                        <div class="description">
+                            Developed a collaborative task management application with real-time updates, user roles, project tracking, and deadline notifications. Used Socket.io for real-time communication.
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-name">Portfolio Website</div>
+                        <div class="project-tech">Angular, TypeScript, CSS3</div>
+                        <div class="description">
+                            Created a modern, responsive portfolio website showcasing projects and skills. Implemented smooth animations, contact forms, and SEO optimization for better visibility.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="experience-item">
+                        <div class="job-title">FullStack Development Course</div>
+                        <div class="company">Najot Talim</div>
+                        <div class="duration">2023 - 2024</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
