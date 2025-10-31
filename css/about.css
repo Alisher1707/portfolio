@@ -53,38 +53,61 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
     margin-top: 3rem;
+    max-width: 600px;
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.95));
+    border: 1.5px solid rgba(83, 0, 160, 0.3);
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
     text-align: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(83, 0, 160, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px) rotateX(5deg);
-    box-shadow: 0 20px 40px rgba(83, 0, 160, 0.3);
-    border-color: #5300a0;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(83, 0, 160, 0.4), 0 0 20px rgba(83, 0, 160, 0.2);
+    border-color: #7f42a7;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
 }
 
 .skill-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #e7e7e7;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
 .skill-card p {
-    font-size: 0.9rem;
-    color: #a7a7a7;
+    font-size: 0.95rem;
+    color: #c7c7c7;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .about-3d {
@@ -193,6 +216,19 @@
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-card p {
+        font-size: 0.85rem;
     }
 
     .about-3d {
